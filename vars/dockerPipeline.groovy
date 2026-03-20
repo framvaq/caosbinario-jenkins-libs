@@ -1,6 +1,8 @@
 def call(Map pipelineParams) {
     pipeline {
-        agent any
+        agent {
+            label 'docker-node'
+        }
 
         stages {
             stage('docker build') {
